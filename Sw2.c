@@ -91,11 +91,11 @@ int main(void)
 			{
 				players_array[i].Luck = (rand() %51);
 			}
-			printf("%d\n", players_array[i].Magic_Skills);
-			printf("%d\n", players_array[i].Smartness);
-			printf("%d\n", players_array[i].Strength);
-			printf("%d\n", players_array[i].Dexterity);
-			printf("%d\n", players_array[i].Luck);
+			printf("\n\nMagic slots: %d\n", players_array[i].Magic_Skills);
+			printf("Smartness: %d\n", players_array[i].Smartness);
+			printf("Strength: %d\n", players_array[i].Strength);
+			printf("Dexterity: %d\n", players_array[i].Dexterity);
+			printf("Luck: %d\n", players_array[i].Luck);
 		}
 		if(strcmp(players_array[i].type,"human")==0)
 		{
@@ -113,11 +113,11 @@ int main(void)
 				players_array[i].Dexterity = ((rand() %100)+1);
 				players_array[i].Luck = ((rand() %100)+1);
 			}
-			printf("\n\n%d\n", players_array[i].Magic_Skills);
-			printf("%d\n", players_array[i].Smartness);
-			printf("%d\n", players_array[i].Strength);
-			printf("%d\n", players_array[i].Dexterity);
-			printf("%d\n", players_array[i].Luck);
+			printf("\n\nMagic slots: %d\n", players_array[i].Magic_Skills);
+			printf("Smartness: %d\n", players_array[i].Smartness);
+			printf("Strength: %d\n", players_array[i].Strength);
+			printf("Dexterity: %d\n", players_array[i].Dexterity);
+			printf("Luck: %d\n", players_array[i].Luck);
 		}
 		if(strcmp(players_array[i].type,"wizard")==0)
 		{
@@ -127,11 +127,11 @@ int main(void)
 			players_array[i].Dexterity = ((rand() %100)+1);
 			players_array[i].Luck = ((rand() %51)+50);
 			
-			printf("\n\n%d\n", players_array[i].Magic_Skills);
-			printf("%d\n", players_array[i].Smartness);
-			printf("%d\n", players_array[i].Strength);
-			printf("%d\n", players_array[i].Dexterity);
-			printf("%d\n", players_array[i].Luck);
+			printf("\n\nMagic slots: %d\n", players_array[i].Magic_Skills);
+			printf("Smartness: %d\n", players_array[i].Smartness);
+			printf("Strength: %d\n", players_array[i].Strength);
+			printf("Dexterity: %d\n", players_array[i].Dexterity);
+			printf("Luck: %d\n", players_array[i].Luck);
 		}
 		if(strcmp(players_array[i].type,"elf")==0)
 		{
@@ -145,11 +145,11 @@ int main(void)
 				players_array[i].Magic_Skills = ((rand() %30)+50);
 			}
 			
-			printf("\n\n%d\n", players_array[i].Magic_Skills);
-			printf("%d\n", players_array[i].Smartness);
-			printf("%d\n", players_array[i].Strength);
-			printf("%d\n", players_array[i].Dexterity);
-			printf("%d\n", players_array[i].Luck);
+			printf("\n\nMagic slots: %d\n", players_array[i].Magic_Skills);
+			printf("Smartness: %d\n", players_array[i].Smartness);
+			printf("Strength: %d\n", players_array[i].Strength);
+			printf("Dexterity: %d\n", players_array[i].Dexterity);
+			printf("Luck: %d\n", players_array[i].Luck);
 		}
 	}
 	
