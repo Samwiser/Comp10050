@@ -42,8 +42,11 @@ int main(void)
 		printf("\nenter player%d name: ", i+1);
 		scanf("%s", &players_array[i].player_name);
 		
-		printf("%s enter your player type (elf, human, ogre, wizard) : ", &players_array[i].player_name);
-		scanf("%s", &players_array[i].type);
+		while(strcmp(players_array[i].type, "elf" )!=0 && strcmp(players_array[i].type, "human" )!=0 && strcmp(players_array[i].type, "ogre" )!=0 && strcmp(players_array[i].type, "wizard" )!=0)
+		{
+			printf("%s enter your player type (elf, human, ogre, wizard) : ", &players_array[i].player_name);
+			scanf("%s", &players_array[i].type);
+		}
 	}
 	
 	while(num_slots<1 || num_slots>20)
