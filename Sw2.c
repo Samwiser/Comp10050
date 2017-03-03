@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-void playerslot(struct players players_array, struct slots array2)
+void playerslot(struct players players_array, struct slots array2);
 
 struct players
 {
@@ -14,7 +14,7 @@ struct players
 	int Magic_Skills;
 	int	Luck;
 	int Dexterity;
-	int position;
+	char position;
 };
 
 struct slots
