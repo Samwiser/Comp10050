@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+void playerslot(struct players players_array, struct slots array2)
 
 struct players
 {
@@ -160,5 +161,27 @@ int main(void)
 		}
 	}
 	
+	playerslot(players players_array, slots array2)
+}
+
+void playerslot(struct players players_array, struct slots array2)
+{
+	int j;
+	srand(time(NULL));
+	 
+	printf("Player positions: \n");
 	
+	for( i = 0 ; i < num_players ; i++)
+	 {
+		j = rand() % num_slots;
+		
+		strcpy(players_array[i].position, array2[j].terrain);
+		printf(" Player %s type %s",players_array[i].player_name, players_array[i].type);
+		printf(" Position: %s ",players_array[i].position);
+	 
+	 }
+	 
+	 
+	
+		
 }
