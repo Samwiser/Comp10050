@@ -250,7 +250,7 @@ void player_abilities(int num_players)
 			printf("Strength: %d\n", players_array[i].Strength);
 			printf("Dexterity: %d\n", players_array[i].Dexterity);
 			printf("Luck: %d\n", players_array[i].Luck);
-
+			printf("I love curry");
 		}
 	}
 }
