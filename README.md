@@ -5,13 +5,15 @@ Software engineering project
 #include <time.h>
 #include <string.h>
 
-void player_abilities(int num_players);
+/*Program by Alen Thomas 16333003 and Sam Bates*/
+
+void player_abilities(int num_players);					//Function prototypes
 void slot_sorting(int num_slots, int rand_num, int num_players);
 void move_player(int num_slots, int num_players, int k);
 void attack_player(int num_slots, int num_players, int k);
 
 
-struct players
+struct players				//Struct containing different variables for the player
 {
 	char player_name[100];
 	char type [100];
@@ -19,23 +21,22 @@ struct players
 	int Smartness;
 	int Strength;
 	int Magic_Skills;
-	int	Luck;
+	int Luck;
 	int Dexterity;
 	int position;
 };
 
 
-
-struct slots
+struct slots			//Slot structure to sort players
 {
 	char terrain[100];
 	char player_inf[100];
 	char type_inf[100];
 };
 
-int num_players, i, j;
+int num_players, i, j;		//Global variable declaration
 int num_slots = 0;
-struct players players_array[100];
+struct players players_array[100];	//Arrays of structs
 struct slots array2[100];
 
 int main(void)
@@ -45,18 +46,20 @@ int main(void)
 	
 	num_players = 0;
 	
-	while(num_players<1 || num_players>6)
-	{
+	while(num_players<1 || num_players>6)			//While loop where user inputs number of players
+	{							//If user inputs less than 1 or more than 6 it keeps asking the user
 		printf("enter number of players(max 6): ");
 		scanf("%d", &num_players);
 	}
 	
-	for(i=0; i<num_players; i++)
+	for(i=0; i<num_players; i++)				//User inputs name
 	{
 		printf("\nenter player %d name: ", i+1);
 		scanf("%s", &players_array[i].player_name);
 		
-		while(strcmp(players_array[i].type, "elf" )!=0 && strcmp(players_array[i].type, "human" )!=0 && strcmp(players_array[i].type, "ogre" )!=0 && strcmp(players_array[i].type, "wizard" )!=0)
+		//User chooses the type of character they want to be
+		
+		while(strcmp(players_array[i].type, "elf" )!=0 && strcmp(players_array[i].type, "human" )!=0 &&			 strcmp(players_array[i].type, "ogre" )!=0 && strcmp(players_array[i].type, "wizard" )!=0)
 		{
 			printf("%s enter your player type (elf, human, ogre, wizard) : ", &players_array[i].player_name);
 			scanf("%s", &players_array[i].type);
@@ -65,17 +68,17 @@ int main(void)
 	
 	while(num_slots<num_players || num_slots>20)
 	{
-		printf("\nenter number of slots(max 20): ");
+		printf("\nenter number of slots(max 20): ");	//User chooses number of slots
 		scanf("%d", &num_slots);
 	}
 	
-	player_abilities(num_players);
+	player_abilities(num_players);		//Call function to sort abilities based on the character type they choose
 	
 	printf("\n");
 	
-	slot_sorting(num_slots, rand_num, num_players);
+	slot_sorting(num_slots, rand_num, num_players);	//Call function to sort players into slots and generate slots
 	
-	printf("Move player/Attack Player \n\n");
+	printf("Move player/Attack Player \n\n");	//User asked wht type of step they want to take 
 	printf("1 - Move player \n");
 	printf("2 - Attack nearest Player \n\n");
 	
