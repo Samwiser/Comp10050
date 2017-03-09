@@ -3,13 +3,16 @@
 #include <time.h>
 #include <string.h>
 
-void player_abilities(int num_players);
+/*Program by Alen Thomas and Sam Bates*/
+/*Crossfire board game*/
+
+void player_abilities(int num_players);					//Function prototype
 void slot_sorting(int num_slots, int rand_num, int num_players);
 void move_player(int num_slots, int num_players, int k);
 void attack_player(int num_slots, int num_players, int k);
 
 
-struct players
+struct players						//Struct containing player data
 {
 	char player_name[100];
 	char type [100];
@@ -17,14 +20,14 @@ struct players
 	int Smartness;
 	int Strength;
 	int Magic_Skills;
-	int	Luck;
+	int Luck;
 	int Dexterity;
 	int position;
 };
 
 
 
-struct slots
+struct slots			//Struct to create slots and store players
 {
 	char terrain[100];
 	char player_inf[100];
@@ -33,7 +36,7 @@ struct slots
 
 int num_players, i, j;
 int num_slots = 0;
-struct players players_array[100];
+struct players players_array[100];	//Array of structs
 struct slots array2[100];
 
 int main(void)
